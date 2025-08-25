@@ -28,12 +28,12 @@ It’s inspired by `react-toastify` and makes showing feedback messages in your 
 2. Run:
    ```bash
    ./gradlew publishToMavenLocal
-Add this in your app’s build.gradle.kts:
+Add this in your app’s build.gradle.kts or gradle.build:
 
 ```
 dependencies {
-    implementation("com.papa.toastify:toastify:1.0.0")
-}
+	        implementation 'com.github.DEVS-shakti:Toastify:Tag'
+	}
 ```
 
 Option 2: JitPack (recommended for sharing)
@@ -43,16 +43,22 @@ Push your project to GitHub.
 Add JitPack repo in settings.gradle.kts:
 
 ```
-repositories {
-    maven { url = uri("https://jitpack.io") }
-}
+dependencyResolutionManagement {
+		repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+		repositories {
+			mavenCentral()
+			maven { url 'https://jitpack.io' }
+		}
+	}
 ```
 
 
 Add dependency:
 
 ```
-implementation("com.github.:Toastify:1.0.0")
+dependencies {
+	        implementation 'com.github.DEVS-shakti:Toastify:Tag'
+	}
 ```
 
 🚀 Usage
